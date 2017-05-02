@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { lengthLimitPipe } from '../customPipes';
+import { arrayLimitPipe } from '../customPipes';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+public  arr1 :Array<number> = [1,2,3,4,5,6,7];
 }
