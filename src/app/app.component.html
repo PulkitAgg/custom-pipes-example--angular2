@@ -1,10 +1,10 @@
 <h1>
-  {{title | lengthLimit : 5 }}
+   <!-- String Custom Pipe is Used here  -->
+      {{title | lengthLimit : 3 }}
 </h1>
 
 <ul>
-
+  <!-- Array Custom Pipe is used here -->
   <li *ngFor="let item of arr1 | arrayLimit ">
   {{item}}</li>
-
 </ul>

@@ -1,10 +1,11 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
+
+                  //This is a custom Pipe for string
 @Pipe({name : 'lengthLimit'})
 export class lengthLimitPipe implements PipeTransform{
-  transform(value,length){
-    console.log("I am in tranform "+ value);
-    return "Pullkit "+ (value.slice(0,length));
+  transform(value : string,length){
+    return value.slice(0,length);
   }
 
 }
@@ -12,7 +13,7 @@ export class lengthLimitPipe implements PipeTransform{
 @Pipe({name : "arrayLimit"})
 export class arrayLimitPipe implements PipeTransform{
   transform(value:Array<number>):Array<number>{
-    console.log();
+    // It send only first three element of the array
     return value.slice(0,3);
   }
 }
